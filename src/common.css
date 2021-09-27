@@ -1,16 +1,116 @@
-/* 屏幕宽度在340px至410px时，基准尺寸使用20px */
-html{
-    font-size: 20px;
+/* 屏幕宽度在 768px 至 1350px 时，基准尺寸使用 20px */
+/*html{*/
+/*  font-size: 20px;*/
+/*}*/
+
+/* 屏幕宽度小于 768px 时，基准尺寸使用 18px */
+/*@media (max-width: 768px){*/
+/*  html{*/
+/*    font-size: 18px;*/
+/*  }*/
+/*}*/
+
+/* 屏幕宽度大于 1350px 时，基准尺寸使用 22px */
+/*@media (min-width: 1350px){*/
+/*  html{*/
+/*    font-size: 22px;*/
+/*  }*/
+/*}*/
+
+html {
+  font-size: 20px;
 }
-/* 屏幕宽度小于340px时，基准尺寸使用18px */
-@media (max-width: 340px){
-    html{
-        font-size: 18px;
-    }
+
+/* 蒙版 */
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
 }
-/* 屏幕宽度大于410px时，基准尺寸使用22px */
-@media (min-width: 410px){
-    html{
-        font-size: 22px;
-    }
+
+/* 边框 */
+.border {
+  border: 1px solid #E1E1E1;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #E1E1E1
+}
+
+.border-top {
+  border-top: 1px solid #E1E1E1;
+}
+
+/* 辅助 flex */
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* 方向 */
+.container-row {
+  flex-direction: row;
+}
+
+.container-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.container-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+
+/* 字体大小 */
+.font-1 {
+  font-size: 0.6rem;
+}
+
+.font-2 {
+  font-size: 0.8rem;
+}
+
+.font-3 {
+  font-size: 1rem;
+}
+
+.font-4 {
+  font-size: 1.2rem;
+}
+
+.font-5 {
+  font-size: 1.4rem;
+}
+
+.font-6 {
+  font-size: 1.6rem;
+}
+
+.font-7 {
+  font-size: 1.8rem;
+}
+
+.font-8 {
+  font-size: 2rem;
+}
+
+.font-9 {
+  font-size: 2.2rem;
+}
+
+
+/* 长、宽 */
+.width-100vw {
+  width: 100vw;
+}
+
+.height-100vh {
+  min-height: 100vh;
 }
