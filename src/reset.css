@@ -8,9 +8,8 @@ audio, video {
     padding: 0;
 }
 /* 统一全局字体 */
-body {
-    font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sa
-    ns-serif
+body * {
+    font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif
 }
 /* 列表元素去掉默认的列表样式 */
 ol, ul {

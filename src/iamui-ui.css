@@ -7,6 +7,9 @@
 /* fontawesome */
 @import './icon.css';
 
+/* 表单 */
+@import './form.css';
+
 /* 公共样式 */
 @import './common.css';
 

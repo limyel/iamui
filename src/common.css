@@ -51,15 +51,19 @@ html {
 }
 
 /* 方向 */
-.container-row {
+.flex-row {
   flex-direction: row;
 }
 
-.container-row-reverse {
+.flex-row-reverse {
   flex-direction: row-reverse;
 }
 
-.container-column-reverse {
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
   flex-direction: column-reverse;
 }
 
