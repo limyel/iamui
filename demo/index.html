@@ -2,136 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>limyel</title>
+  <title>title</title>
   <link rel="stylesheet" href="../src/iamui-ui.css">
-  <style>
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 99px
-    }
-
-    .my-header {
-      padding-top: 60px;
-      padding-bottom: 20px;
-    }
-
-    .my-content {
-      padding: 30px 0;
-      width: 80%;
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-
-    .nav-item {
-      margin: 0 8px;
-    }
-  </style>
 </head>
 <body>
-  <div class="container height-100vh">
-    <div class="my-header container border-bottom">
-      <div class="container flex-row justify-content-center">
-        <img src="img.png" class="avatar">
-      </div>
-      <div class="container flex-row justify-content-center font-2">
-        hello world
-      </div>
-      <div class="container flex-row justify-content-center">
-        <a class="nav-item" href="#">
-          <i class="fa fa-home"></i>
+
+  <div class="container flex-row minh-100vh">
+    <div class="container w-4" style="background-color: #2d374b">
+      <div class="container h-3 justify-content-center text-align-center color-light">limyel-blog</div>
+      <div class="container">
+        <a href="#" class="font-3 color-light mt-3 mb-3">
+          <div class="text-align-center">文章</div>
         </a>
-        <a class="nav-item" href="#">
-          <i class="fa fa-navicon"></i>
+        <a href="#" class="font-3 color-light mt-3 mb-3">
+          <div class="text-align-center">标签</div>
         </a>
-        <a class="nav-item" href="#">
-          <i class="fa fa-tags"></i>
-        </a>
-        <a class="nav-item" href="#">
-          <i class="fa fa-rss-square"></i>
-        </a>
-        <a class="nav-item" href="#">
-          <i class="fa fa-user-o"></i>
-        </a>
-        <a class="nav-item" href="#">
-          <i class="fa fa-search"></i>
+        <a href="#" class="font-3 color-light mt-3 mb-3">
+          <div class="text-align-center">关于</div>
         </a>
       </div>
     </div>
+    <div class="container flex-column flex-grow-1">
+      <div class="container h-3" style="background-color: #cccccc">
 
-    <div class="content flex-grow-1 my-content">
-      <p class="font-1">hello</p>
-      <p class="font-2">hello</p>
-      <p class="font-3">hello</p>
-      <p class="font-4">hello</p>
-      <p class="font-5">hello</p>
-      <p class="font-6">hello</p>
-      <p class="font-7">hello</p>
-      <p class="font-8">hello</p>
-      <p class="font-9">hello</p>
-      <p class="font-2">
-        值传递与引用传递
-        值传递与引用传递是将参数传递给函数的两种方式。在开始学习 Java 时，经常会看到一句话——Java 中只有值传递，没有引用传递。我一开始无法理解这句话，因为当一个对象传入一个方法时，对对象进行修改，方法外部的对象也会跟着改变，这不就是引用传递吗？为了理解这个问题，首先要明白什么是值传递，什么是引用传递。
-
-        堆与栈
-        在 Java 中，有两种数据类型，一种是基本类型，如 int、long、double 等，这些基本类型的变量会以实际的值存储在栈中，还有一种是引用类型，如 String、StringBuilder 和我们自定义的对象等，对象本身会存储在堆中，而引用类型的变量会在栈中存储对象的引用——指向了对象在内存中的地址。之所以这样分开存储，是因为栈与堆的优缺点决定的：
-
-        栈存取速度很快，但是栈中数据大小与生命周期必须是确定的。
-        堆可以动态地分配内存大小，无需确定元素的生命周期，但是要在运行时动态分配内存，存取速度较慢。
-        图
-
-        栈的元素出入规则是 LIFO（先进后出），所以栈中元素的生命周期必须是确定的，后面进去的会先推出。
-
-        什么是值传递？
-        搞清楚堆与栈存的不同东西之后，就可以很好地理解值传递了。当一个 Java 程序运行时，如果要往某个函数中传入一个基本类型的数据，它会将该基本类型的数据复制一份，再压入栈中，以供函数调用。所以无论函数如何修改一个基本类型的变量形参，都不会对实参产生影响，因为形参是实参的一份复制。
-
-        图
-
-        但是如果是传入一个引用对象呢？此时它会将该对象的引用变量复制一份，再压入栈中，此时栈中有两个引用变量，它们的值指向的是同一个对象，此时如果对形参进行修改，则实参也会产生影响，因为它们指向的对象是同一个。
-
-        图
-
-        上述的行为就是值传递，所以什么是值传递？值传递就是将栈中的实参值拷贝一份，在压入栈中作为形参，传递给函数。
-
-        什么是引用传递？
-        知道了什么是值传递，那么什么是引用传递呢？因为 Java 中没有引用传递，所以为了观察引用传递，只能用别的语言，比如——C，C 的指针就是引用传递。
-
-        #include
-
-        void myFunc(int *num);
-
-        int main() {
-        int myNum = 100;
-        printf("%d\n", myNum);            // 输出 100
-        myFunc(&myNum);
-        printf("%d", myNum);            // 输出 10
-        return 0;
-        }
-
-        void myFunc(int *num) {
-        *num = 10;
-        }
-        这是一段非常简单的 C 代码，第一个 printf 打印出 100，是变量初始化时赋予的值，在经历过 myFunc 函数之后，第二次 printf 打印的是 10。此时堆栈中发生了什么？
-
-        图
-
-        没有拷贝，在引用传递中，直接将栈中变量的地址作为参数传递给函数，所以在 C 中，对指针进行修改就是直接修改栈中变量的值，修改了形参就是修改实参。
-
-        简单点
-        理解了什么是值传递、引用传递，便足以解释为什么说 Java 中只有值传递了。也就是说，Java 传递参数时只有值传递，只不过当参数是对象时，这个值是一个引用。
-
-        可能是 Java 之父认为大多数程序员都是笨蛋，于是把指针——引用传递给去掉了，减少大家犯错的机会。
-      </p>
-    </div>
-
-    <div class="footer border-top">
-      <div class="">
-        <a href="https://beian.miit.gov.cn/">闽ICP备2021003109号-1</a>
       </div>
-      <div class="">
-        limyel's blog by <a href="https://github.com/lim-mil">limyel</a> <i class="fa fa-copyright"></i> 2021
+      <div class="container flex-grow-1">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">标题</th>
+              <th scope="col">标签</th>
+              <th scope="col">创建时间</th>
+              <th scope="col">编辑时间</th>
+              <th scope="col">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">1</td>
+              <td scope="row">hello python</td>
+              <td scope="row">Python</td>
+              <td scope="row">2021-1-1 12:23</td>
+              <td scope="row">2021-1-1 23:12</td>
+              <td scope="row">
+                <div>
+                  <button class="btn" style="display: inline-block">编辑</button>
+                  <button class="btn" style="display: inline-block">删除</button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td scope="row">1</td>
+              <td scope="row">hello python</td>
+              <td scope="row">Python</td>
+              <td scope="row">2021-1-1 12:23</td>
+              <td scope="row">2021-1-1 23:12</td>
+              <td scope="row">
+                <div>
+                  <button class="btn" style="display: inline-block">编辑</button>
+                  <button class="btn" style="display: inline-block">删除</button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td scope="row">1</td>
+              <td scope="row">hello python</td>
+              <td scope="row">Python</td>
+              <td scope="row">2021-1-1 12:23</td>
+              <td scope="row">2021-1-1 23:12</td>
+              <td scope="row">
+                <div>
+                  <button class="btn" style="display: inline-block">编辑</button>
+                  <button class="btn" style="display: inline-block">删除</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
+
 </body>
 </html>

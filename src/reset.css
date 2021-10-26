@@ -23,7 +23,13 @@ table {
 /* 去掉默认的下划线 */
 a{
     text-decoration: none;
+    color:#2d374b;
 }
+a:hover {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
 /* 去掉input自带的边缘效果和背景颜色 */
 input{
     outline: none;

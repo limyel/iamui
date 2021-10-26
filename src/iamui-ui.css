@@ -10,6 +10,12 @@
 /* 表单 */
 @import './form.css';
 
+/* 按钮 */
+@import "./button.css";
+
+/* 表格 */
+@import "./table.css";
+
 /* 公共样式 */
 @import './common.css';
 

@@ -1,0 +1,52 @@
+.btn {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  min-width: 2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #ffffff;
+}
+
+.btn-info {
+  background-color: #0dcaf0;
+  color: #ffffff;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+}
+
+.btn-dark {
+  background-color: #212529;
+  color: #ffffff;
+}
