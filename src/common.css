@@ -53,9 +53,17 @@ html {
   border-left: 1px solid #E1E1E1;
 }
 
+.border-secondary {
+  border: 1px solid #6c757d;
+}
+
 .border-left-secondary {
   border-left: 1px solid #6c757d;
 }
+
+
+
+
 
 /* 外边距 */
 .m-1 {
@@ -561,6 +569,48 @@ html {
   color: #212529;
 /* #1c1f23 */
 }
+
+
+.bg-primary {
+  background-color: #0d6efd;
+  /* #0b5ed7 */
+}
+
+.bg-secondary {
+  background-color: #6c757d;
+  /* #5c636a */
+}
+
+.bg-success {
+  background-color: #198754;
+  /* #157347 */
+}
+
+.bg-danger {
+  background-color: #dc3545;
+  /* #bb2d3b */
+}
+
+.bg-warning {
+  background-color: #ffc107;
+  /* #ffca2c */
+}
+
+.bg-info {
+  background-color: #0dcaf0;
+  /* #31d2f2 */
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+  /* #f9fafb */
+}
+
+.bg-dark {
+  background-color: #212529;
+  /* #1c1f23 */
+}
+
 
 .border-box {
   box-sizing: border-box;

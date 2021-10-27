@@ -1,40 +1,49 @@
 .form-input {
   box-sizing: border-box;
-  height: 30px;
-  padding: 15px 10px;
-  line-height: 30px;
-  border: 2px solid #E1E1E1;
-  outline: none;
-  border-radius: 5px;
+  border: 2px solid #ced4da;
+  padding: 7px 10px;
+  font-size: 0.8rem;
   width: 100%;
 }
 .form-input:focus {
-  border: 2px solid #0d6efd
+  outline: 2px solid #bfdeff;
 }
 
 .form-label {
   width: 100%;
   line-height: 30px;
   margin-right: 10px;
+  font-size: 0.8rem;
 }
 
 .form-textarea {
-  width: 100%;
   box-sizing: border-box;
-  border: 2px solid #E1E1E1;
-  outline: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border: 2px solid #ced4da;
+  padding: 7px 10px;
+  font-size: 0.8rem;
+  width: 100%;
+  resize: none;
+  min-height: 12rem;
 }
 .form-textarea:focus {
-  border: 2px solid #0d6efd
+  outline: 2px solid #bfdeff;
+}
+
+.select {
+  min-width: 4rem;
+  box-sizing: border-box;
+  border: 2px solid #ced4da;
+}
+.select:focus {
+  outline: 2px solid #bfdeff;
 }
 
 .form-group {
-  display: flex;
+  /*display: flex;*/
   margin: 5px 0;
 }
 
 .form-group > * {
   margin: 5px 0;
 }
+
