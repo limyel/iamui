@@ -5,16 +5,65 @@
   <title>Title</title>
   <link rel="stylesheet" href="../src/iamui-ui.css">
   <style>
+    .modal {
+      min-width: 500px;
+      min-height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+      border-radius: 8px;
+      border: 1px solid #E1E1E1;
+    }
 
+    .modal-header {
+      display: flex;
+      min-height: 60px;
+      border-bottom: 1px solid #E1E1E1;
+      padding: 0 20px;
+    }
+    .modal-header > * {
+      line-height: 60px;
+      font-size: 1rem;
+    }
+    .modal-title {
+      flex-grow: 1;
+    }
+
+    .modal-body {
+      min-height: 180px;
+    }
+
+    .modal-footer {
+      min-height: 60px;
+      border-top: 1px solid #E1E1E1;
+      line-height: 60px;
+    }
+
+    .close {
+      border: none;
+      background-color: #ffffff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <form class="form-group">
-    <select id="tags" multiple class="select">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select>
-  </form>
+
+  <div class="modal border-secondary">
+    <div class="modal-header">
+      <div class="modal-title">hello world</div>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <div class="modal-body">
+
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" style="display: inline-block; content: ''; height: 100%; vertical-align: middle;">保存</button>
+    </div>
+  </div>
+
+
 </body>
 </html>
