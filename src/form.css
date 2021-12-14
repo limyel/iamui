@@ -22,11 +22,23 @@
   padding: 7px 10px;
   font-size: 0.8rem;
   width: 100%;
-  resize: none;
+  /*resize: none;*/
   min-height: 12rem;
 }
 .form-textarea:focus {
   outline: 2px solid #bfdeff;
+}
+.resize-vertical {
+  resize: vertical;
+}
+.resize-horizontal {
+  resize: horizontal;
+}
+.resize-none {
+  resize: none;
+}
+.resize-both {
+  resize: both;
 }
 
 .select {
