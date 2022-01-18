@@ -61,12 +61,8 @@ input{
   padding: 0 24px;
   width: 100%;
 }
-/* fontawesome */
-/* 引入 fontawesome 字体图标 */
-.fa {
-  color: #4990ee;
-  display: inline-block;
-}
+
+
 /* 表单 */
 .form-input {
   box-sizing: border-box;
